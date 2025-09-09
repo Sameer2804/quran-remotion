@@ -1,17 +1,28 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import { Cue, MyComposition } from "./Composition";
+import cues from "../public/test.json";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="MyComp"
+        id="Landscape1920x1080"
         component={MyComposition}
-        durationInFrames={60}
-        fps={30}
-        width={1280}
-        height={720}
+        width={1920}
+        height={1080}
+        fps={60}
+        durationInFrames={Math.ceil((cues[cues.length-1].end + 2) * 60)}
+        defaultProps={{cues: cues as Cue[], fps: 60, audioUrl: "Surah Masad.mp3"}}
+      />
+       <Composition
+        id="Landscape1080x1920"
+        component={MyComposition}
+        width={1080}
+        height={1920}
+        fps={60}
+        durationInFrames={Math.ceil((cues[cues.length-1].end + 2) * 60)}
+        defaultProps={{cues: cues as Cue[], fps: 60, audioUrl: "Surah Masad.mp3"}}
       />
     </>
   );

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'qpc-nastaleeq';
+  src: url('https://static-cdn.tarteel.ai/qul/fonts/nastaleeq/KFGQPCNastaleeq-Regular.ttf');
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,400;&display=swap');
+
+@font-face {
+  font-family: 'qpc-hafs';
+  src: url('https://static-cdn.tarteel.ai/qul/fonts/UthmanicHafs_V22.ttf');
+  font-display: swap;
+}
